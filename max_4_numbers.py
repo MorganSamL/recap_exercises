@@ -3,7 +3,8 @@ print("This program reads 4 numbers and will print the biggest one")
 request = "Give me a number that you want to compare"
 error = "That was not a valid number"
 max = 0
-while num_read < 4
+cheese = int(input("Please enter the amount of numbers you would like to compare: "))
+while num_read < cheese:
     try:
         read_line = input(request)
         num = float(read_line)

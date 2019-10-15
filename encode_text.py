@@ -21,5 +21,13 @@ for c in text:
     encoded = encoded + alphabet[new_pos]
 print("The encoded text is:", encoded)
 
-
+decoded = ""
+for c in encoded:
+    pos = alphabet.find(c)
+    if pos == -1:
+        decoded = decoded + c
+        continue
+    new_pos = (pos - seed) % 26  # circular addition to account for going over the end of the alphabet
+    decoded = decoded + alphabet[new_pos]
+print("The decoded (original) text is:", decoded)
 # decode the text back to the original value!

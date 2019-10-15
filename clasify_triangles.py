@@ -1,5 +1,6 @@
 # read the value for the sides of a triangle. Determine what kind of a triangle we have
 # could be: equilateral, isosceles, scalene, right triangle, acute triangle, obtuse triangle.
+import math
 a = b = c = 0
 
 read_line = input("Give me 3 numbers separated by , and space: 5.1, 4, 7")
@@ -47,3 +48,6 @@ else:
     print("Acute")
 
 # Print the area of the Triangle
+special = (max + min1 + min2)/2
+area = math.sqrt(special*(special-min1)*(special-min2)*(special-max))
+print("Area of triangle is", area)
